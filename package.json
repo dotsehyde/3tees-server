@@ -13,6 +13,7 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "cache-control": "^2.0.0",
     "express": "^4.18.0",
     "http": "^0.0.1-security",
     "mongoose": "^6.3.1",

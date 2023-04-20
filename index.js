@@ -16,6 +16,13 @@ app.use(express.json());
 const DB =
   "mongodb+srv://root:6wcGkVrFdiPwwtWc@tic-tac.anc5wxq.mongodb.net/?retryWrites=true&w=majority";
 
+io.set('match origin protocol', true);
+io.set('origins', '*:*');
+
+io.engine.on('headers', (headers, req) => {
+  headers['Cache-Control'] = 'no-cache';
+});
+
 io.on("connection", (socket) => {
   console.log("connected!");
   socket.on("createRoom", async ({ nickname }) => {
