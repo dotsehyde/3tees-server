@@ -13,8 +13,8 @@ var io = require("socket.io")(server);
 //client-> middleware-> server
 app.use(express.json());
 
-const DB = "mongodb://127.0.0.1:27017/game";
-//"mongodb+srv://root:6wcGkVrFdiPwwtWc@tic-tac.anc5wxq.mongodb.net/?retryWrites=true&w=majority";
+const DB = // "mongodb://127.0.0.1:27017/game";
+  "mongodb+srv://root:6wcGkVrFdiPwwtWc@tic-tac.anc5wxq.mongodb.net/?retryWrites=true&w=majority";
 
 io.set('match origin protocol', true);
 io.set('origins', '*:*');
